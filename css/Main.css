@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, Arial;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: rgba(136, 25, 108, 1.4);
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto;
+}
+
+.left-area,
+.right-area {
+  width: 50%;
+  height: 100%;
+}
+
+.left-area {
+  display: flex;
+  position: relative;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  position: absolute;
+
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 1.25em 1.87em;
+}
+/* isi content */
+
+.content h2 {
+  font-size: 2.8rem;
+  color: aliceblue;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 0.12rem;
+}
+.content span {
+  color: rgb(231, 197, 152);
+}
+
+.content p {
+  font-size: 1rem;
+  color: antiquewhite;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+}
+.content #email {
+  width: 240px;
+  height: 40px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.content #submit {
+  width: 100px;
+  background: darksalmon;
+  border: none;
+  font-weight: bold;
+  color: aliceblue;
+  text-transform: uppercase;
+}
+
+.content #submit:hover {
+  opacity: 0.8;
+  letter-spacing: 0.1rem;
+  transition: 0.5s;
+}
+
+/* right Area */
+
+.right-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgBox {
+  width: 300px;
+  height: 400px;
+}
+
+.imgCard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 2px solid antiquewhite;
+  border-radius: 10px;
+}
+
+.imgCard img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  transform: translate(30px, -30px);
+  border-radius: 10px;
+  border: 2px solid antiquewhite;
+}
+
+@media (max-width: 1000px) {
+  /* header {
+    height: 80%;
+  } */
+
+  .container {
+    flex-direction: column-reverse;
+  }
+  .left-area,
+  .right-area {
+    width: 100%;
+  }
+
+  .right-area {
+    display: none;
+  }
+
+  .content h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .content h2 {
+    font-size: 2.6rem;
+    text-align: center;
+  }
+  .content p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .content {
+    width: 95%;
+  }
+
+  /* header {
+    height: 60%;
+  } */
+  .content #email,
+  .content #submit {
+    font-size: 0.8rem;
+  }
+}
